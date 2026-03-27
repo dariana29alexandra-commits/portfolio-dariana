@@ -1,7 +1,13 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #0f0f1a !important;
   font-family: 'Poppins', sans-serif;
-  background: #0f0f1a;
   color: white;
   overflow-x: hidden;
 }
@@ -11,33 +17,32 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding-left: 80px;
   background: radial-gradient(circle at center, #1a1a2e, #0f0f1a);
-  text-align: center;
 }
 
 h1 {
   font-size: 3rem;
-  margin: 0;
   background: linear-gradient(90deg, #00f5ff, #ff00c8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 p {
+  margin: 15px 0;
   font-size: 1.2rem;
-  opacity: 0.8;
-  margin: 10px 0 20px;
+  opacity: 0.9;
 }
 
 button {
+  width: fit-content;
   padding: 12px 25px;
   background: transparent;
   border: 2px solid #00f5ff;
   color: #00f5ff;
   border-radius: 30px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 button:hover {
