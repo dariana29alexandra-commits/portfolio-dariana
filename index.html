@@ -3,105 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <title>Portfolio Dariana</title>
+
+    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="estilos.css" />
   </head>
+
   <body>
     <section class="hero">
       <h1>Hola, soy Dariana 👋</h1>
-      <p class="typing"></p>
+      <p>Programadora futurista | Tech lover | Future developer 🚀</p>
       <button>Ver mis proyectos</button>
     </section>
 
-    <div class="grid"></div>
-    <canvas id="particles"></canvas>
+    <section class="projects">
+      <h2>Mis Proyectos</h2>
 
-    <script>
-      /* TYPING EFFECT */
-      const text =
-        "Ingeniera en sistemas en progreso | Tech lover | Future developer 🚀";
-      const typingElement = document.querySelector(".typing");
-      let index = 0;
+      <div class="cards">
+        <div class="card">
+          <h3>Portfolio Web</h3>
+          <p>Sitio web personal desarrollado con HTML y CSS.</p>
+        </div>
 
-      function type() {
-        if (index < text.length) {
-          typingElement.innerHTML += text.charAt(index);
-          index++;
-          setTimeout(type, 50);
-        }
-      }
-      type();
+        <div class="card">
+          <h3>Chatbot en C++</h3>
+          <p>Asistente básico por consola con respuestas dinámicas.</p>
+        </div>
 
-      /* PARTICLES */
-      const canvas = document.getElementById("particles");
-      const ctx = canvas.getContext("2d");
-
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-
-      let particlesArray = [];
-
-      class Particle {
-        constructor() {
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;
-          this.size = Math.random() * 2;
-          this.speedY = Math.random() * 0.5 + 0.2;
-        }
-
-        update() {
-          this.y -= this.speedY;
-          if (this.y < 0) {
-            this.y = canvas.height;
-            this.x = Math.random() * canvas.width;
-          }
-        }
-
-        draw() {
-          ctx.fillStyle = "#00f5ff";
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
-
-      function init() {
-        for (let i = 0; i < 120; i++) {
-          particlesArray.push(new Particle());
-        }
-      }
-
-      function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particlesArray.forEach((p) => {
-          p.update();
-          p.draw();
-        });
-        requestAnimationFrame(animate);
-      }
-
-      init();
-      animate();
-
-      /* CURSOR GLOW */
-      const cursor = document.createElement("div");
-      cursor.style.position = "fixed";
-      cursor.style.width = "15px";
-      cursor.style.height = "15px";
-      cursor.style.borderRadius = "50%";
-      cursor.style.background = "#00f5ff";
-      cursor.style.boxShadow = "0 0 20px #00f5ff";
-      cursor.style.pointerEvents = "none";
-      cursor.style.zIndex = "9999";
-      document.body.appendChild(cursor);
-
-      document.addEventListener("mousemove", (e) => {
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
-      });
-    </script>
+        <div class="card">
+          <h3>Sistema Contable</h3>
+          <p>Proyecto enfocado en automatización de procesos contables.</p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
