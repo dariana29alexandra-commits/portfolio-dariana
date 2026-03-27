@@ -1,12 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dariana Leonicie | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dariana Leonicie | Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color:white;
+  line-height:1.6;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 10%;
+  background:rgba(15,23,42,0.8);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.logo{
+  font-weight:700;
+  font-size:20px;
+  color:#38bdf8;
+}
+
+.navbar nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.navbar nav a:hover{
+  color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+.hero-content h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  font-size:20px;
+  opacity:0.9;
+}
+
+.hero-content .sub{
+  margin-top:10px;
+  color:#38bdf8;
+}
+
+/* SOBRE */
+.sobre{
+  padding:100px 10%;
+  background:#0f172a;
+}
+
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:50px;
+}
+
+.foto img{
+  width:280px;
+  border-radius:20px;
+  box-shadow:0 0 30px rgba(56,189,248,0.3);
+}
+
+.texto{
+  flex:1;
+}
+
+.texto h2{
+  font-size:32px;
+  margin-bottom:20px;
+  color:#38bdf8;
+}
+
+.texto p{
+  margin-bottom:15px;
+}
+
+/* HABILIDADES */
+.habilidades{
+  padding:100px 10%;
+  text-align:center;
+}
+
+.habilidades h2{
+  font-size:32px;
+  margin-bottom:50px;
+  color:#38bdf8;
+}
+
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:center;
+}
+
+.card{
+  background:#1e293b;
+  width:300px;
+  border-radius:20px;
+  overflow:hidden;
+  transition:0.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 35px rgba(56,189,248,0.4);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card h3{
+  margin:20px 0 10px;
+}
+
+.card p{
+  padding:0 20px 20px;
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* CONTACTO */
+.contacto{
+  padding:100px 10%;
+  text-align:center;
+  background:#0f172a;
+}
+
+.contacto h2{
+  font-size:32px;
+  margin-bottom:20px;
+  color:#38bdf8;
+}
+
+.contacto p{
+  margin:10px 0;
+  font-size:18px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617;
+  font-size:14px;
+  opacity:0.6;
+}
+</style>
 </head>
 
 <body>
@@ -37,25 +218,11 @@
 
     <div class="texto">
       <h2>Sobre mí</h2>
-      <p>
-        Profesional con experiencia en conciliaciones bancarias,
-        balances de comprobación y control financiero.
-      </p>
-      <p>
-        He trabajado con sistemas como Oracle y Profit Plus,
-        optimizando procesos administrativos.
-      </p>
-      <p>
-        Actualmente desarrollo páginas web y soluciones digitales
-        que ayudan a las empresas a crecer.
-      </p>
-      <p>
-        Mi mente es estratégica y abierta: convierto procesos manuales
-        en sistemas automáticos eficientes.
-      </p>
-      <p>
-        Especial interés en Inteligencia Artificial y automatización empresarial.
-      </p>
+      <p>Experiencia en conciliaciones bancarias, balances de comprobación y control financiero.</p>
+      <p>Manejo de sistemas Oracle y Profit Plus.</p>
+      <p>Desarrollo de páginas web y automatización empresarial.</p>
+      <p>Convierto procesos manuales en sistemas automáticos eficientes.</p>
+      <p>Interés en Inteligencia Artificial y tecnología.</p>
     </div>
   </div>
 </section>
@@ -68,13 +235,13 @@
     <div class="card">
       <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Administración">
       <h3>Administración</h3>
-      <p>Conciliaciones bancarias, balances de comprobación y control financiero empresarial.</p>
+      <p>Conciliaciones bancarias y control financiero empresarial.</p>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f" alt="Ingeniería">
       <h3>Tecnología & Ingeniería</h3>
-      <p>Diseño web, automatización de procesos y optimización digital empresarial.</p>
+      <p>Diseño web, automatización y optimización digital.</p>
     </div>
 
   </div>
