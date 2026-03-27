@@ -14,7 +14,7 @@ body {
   color: white;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 
 .navbar {
   display: flex;
@@ -46,7 +46,7 @@ body {
   color: #38bdf8;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 
 .hero {
   height: 100vh;
@@ -73,7 +73,7 @@ body {
   font-weight: 500;
 }
 
-/* ===== SOBRE MI ===== */
+/* SOBRE MI */
 
 .sobre {
   padding: 120px 60px;
@@ -113,7 +113,7 @@ body {
   line-height: 1.6;
 }
 
-/* ===== HABILIDADES ===== */
+/* HABILIDADES */
 
 .habilidades {
   padding: 120px 60px;
@@ -163,7 +163,7 @@ body {
   line-height: 1.5;
 }
 
-/* ===== CONTACTO ===== */
+/* CONTACTO */
 
 .contacto {
   padding: 120px 60px;
@@ -182,7 +182,7 @@ body {
   font-size: 1.1rem;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 footer {
   text-align: center;
